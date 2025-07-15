@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #f0f4f8;
-  color: #333;
+  background: #dad7cd;
+  color: #344e41;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ body {
   display: flex;
   max-width: 1000px;
   width: 100%;
-  background: #fff;
+  background: #f7f7f2;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   overflow: hidden;
@@ -36,12 +36,12 @@ body {
 .form-section h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #1e3a8a;
+  color: #3a5a40;
   text-align: center;
 }
 
 .form-section p {
-  color: #555;
+  color: #588157;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -54,47 +54,55 @@ form {
 form input, form select {
   padding: 14px;
   margin-bottom: 15px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #a3b18a;
   border-radius: 8px;
   transition: border-color 0.3s, box-shadow 0.3s;
   font-size: 1rem;
 }
 
 form input:focus, form select:focus {
-  border-color: #1e40af;
-  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
+  border-color: #3a5a40;
+  box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.2);
   outline: none;
 }
 
-form button {
-  padding: 14px;
-  background: #f97316;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+.button-group-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-form button:hover {
-  background: #ea580c;
-  transform: translateY(-2px);
+.button-group-center button {
+  background: none;
+  border: none;
+  color: #3a5a40;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.button-group-center button:hover {
+  color: #588157;
+  border-bottom: 2px solid #588157;
 }
 
 .alt-option {
   text-align: center;
   margin: 20px 0 10px;
-  color: #888;
+  color: #588157;
 }
 
 .login-link {
   text-align: center;
-  color: #555;
+  color: #344e41;
 }
 
 .login-link a {
-  color: #1e3a8a;
+  color: #3a5a40;
   text-decoration: none;
 }
 
@@ -102,23 +110,39 @@ form button:hover {
   text-decoration: underline;
 }
 
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-buttons button {
+  padding: 10px 14px;
+  background: #a3b18a;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.social-buttons button:hover {
+  background: #588157;
+  transform: translateY(-2px);
+}
+
 .illustration-section {
   flex: 1;
-  background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+  background: linear-gradient(to bottom right, #a3b18a, #dad7cd);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 40px;
-  color: #1e3a8a;
+  color: #344e41;
   text-align: center;
-}
-
-.illustration-section img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 20px;
 }
 
 .illustration-section h2 {
@@ -127,43 +151,9 @@ form button:hover {
 }
 
 .illustration-section p {
-  color: #1e3a8a;
+  color: #344e41;
   max-width: 300px;
 }
-
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.social-buttons button {
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  background: #e2e8f0;
-  color: #1e3a8a;
-  font-size: 22px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.social-buttons button:hover {
-  background: #cbd5e1;
-  transform: scale(1.05);
-}
-
-/* If using SVG or Font Awesome icons, ensure proper sizing */
-.social-buttons button i, .social-buttons button svg {
-  font-size: 22px;
-}
-
 
 @media (max-width: 900px) {
   .container {
@@ -172,8 +162,5 @@ form button:hover {
   .form-section, .illustration-section {
     max-height: none;
     padding: 30px 20px;
-  }
-  .illustration-section img {
-    max-width: 60%;
   }
 }
